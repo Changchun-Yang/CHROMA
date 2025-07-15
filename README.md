@@ -1,7 +1,7 @@
 # CHROMA: An Inclusive Foundation Model for Generalizable Cytogenetics in Precision Oncology
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-blue.svg)](LICENSE)
-[![Paper](https://img.shields.io/badge/Paper-Nature-green)](https://arxiv.org/abs/2505.15868)
+[![Paper](https://img.shields.io/badge/Paper-Arxiv-yellow)](https://arxiv.org/abs/2505.15868)
 [![Model Weights](https://img.shields.io/badge/Model-Weights-blue)](https://huggingface.co/Boyoungc/CHROMA_pretrain/tree/main)
 
 ---
