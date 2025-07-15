@@ -103,7 +103,7 @@ torchrun --nproc_per_node=8 --master_port=48798 main_pretrain.py \
     --warmup_epochs 40 \
     --blr 1.5e-4 \
     --weight_decay 0.05 \
-    --data_path '/ibex/project/c2277/data/Karyotype/pretrain_processed' \
+    --data_path 'your_data_path' \
     --norm_pix_loss \
     --batch_size 192 \
     --w_flip \
@@ -130,9 +130,9 @@ torchrun --nproc_per_node=8 --master_port=48798 main_finetune.py \
     --weight_decay 0.05 \
     --drop_path 0.2 \
     --nb_classes 24 \
-    --data_path /ibex/project/c2277/data/Karyotype/class_abnormal/pretrain/cls_83w_split/ \
+    --data_path your_data_path \
     --task ./finetune_chr_24_class/ \
-    --finetune /ibex/user/yangc0h/xiaona/abnormal/chr_mae/output_dir/checkpoint-799.pth \
+    --finetune pretraining_checkpoint_path \
     --input_size 224 \
     --epochs 2 \
     --distributed True
@@ -158,7 +158,7 @@ torchrun main_finetune.py \
     --nb_classes 2 \
     --data_path ${DATA_PATH} \
     --task ${TASK_PATH} \
-    --finetune /ibex/user/yangc0h/xiaona/abnormal/chr_mae/output_dir/checkpoint-799.pth \
+    --finetune pretraining_checkpoint_path \
     --input_size 224 \
     --epochs 30
 ```
@@ -183,7 +183,7 @@ torchrun main_finetune_unsta_dist.py \
     --nb_classes 5 \
     --data_path ${DATA_PATH_5} \
     --task ${TASK_PATH_CHROMA_5} \
-    --finetune /ibex/user/yangc0h/xiaona/abnormal/chr_mae/output_dir/checkpoint-799.pth \
+    --finetune pretraining_checkpoint_path \
     --input_size 224 \
     --seed ${seeds} \
     --epochs 30 \
