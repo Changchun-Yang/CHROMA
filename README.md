@@ -1,4 +1,4 @@
-# CHROMA: An Inclusive Foundation Model for Generalizable Cytogenetics in Precision Oncology
+# CHROMA: A Comprehensive Foundation Model for Generalizable Cytogenetics in Precision Oncology
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-blue.svg)](LICENSE)
 [![Paper](https://img.shields.io/badge/Paper-Arxiv-yellow)](https://arxiv.org/abs/2505.15868)
@@ -86,6 +86,28 @@ for i, (inputs, targets) in enumerate(your_data_loader):
     _,prediction_decode = torch.max(prediction_softmax, 1)
     _,true_label_decode = torch.max(true_label, 1)
 ```
+
+## 🔮 Inference Demo
+
+We provide an easy-to-use Jupyter Notebook to demonstrate how to run inference on a single image using a pre-trained or fine-tuned CHROMA model.
+
+1.  **Notebook Demo**:
+    Open `inference_demo.ipynb` in Jupyter Lab or Notebook. This script allows you to:
+    - Load the model architecture.
+    - Load your checkpoint weights.
+    - Preprocess a single input image.
+    - Visualize the prediction result.
+
+2.  **Command Line Inference**:
+    You can also run inference on a dataset folder using `main_inference.py`:
+    ```bash
+    python main_inference.py \
+        --model vit_large_patch16 \
+        --nb_classes 24 \
+        --checkpoint_path ./path/to/checkpoint.pth \
+        --data_path ./path/to/test_images \
+        --batch_size 1
+    ```
 
 ---
 ## 🏋️‍♂️ Pretraining CHROMA from Scratch
